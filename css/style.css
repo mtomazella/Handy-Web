@@ -1,0 +1,359 @@
+.notSelec{
+
+    -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+
+}
+
+p.largerFont{
+
+    color: black;
+    font-size: larger;
+
+}
+
+.icon{
+
+    color: black;
+
+}
+
+/* Index */
+
+    /* Jumbotron */
+
+        div.jumbotron{
+
+            border-radius: 0; 
+            display: flex; 
+            background-color: white; 
+            font-family: 'Roboto', sans-serif; 
+            font-weight: 300;
+
+        }
+
+        a.jumbotronButton{
+
+            background-color: #F7C59F;
+            border: 0px; 
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        a.jumbotronButton:hover{
+
+            background-color: rgb(228, 180, 143);
+
+        }
+
+        .jumbotronImageDiv{
+
+            background-color: rgb(29, 29, 29);
+            border-radius: 50%;
+            border-top-right-radius: 0px; 
+            border-bottom-right-radius: 0;
+
+        }
+
+        .jumbotronImage{
+
+            max-width: 100%;
+            max-height: 100%;
+            height: auto;
+            width: auto;
+
+        }
+
+        p.jumbotronTittle{
+
+            font-family: 'Roboto', sans-serif; 
+            font-weight: 100;
+            font-size: 4rem;
+
+        }
+
+        div.jumbotronTextDiv{
+
+            margin-top: 3%;
+
+
+        }
+
+        p.lead{
+
+            font-size: 170%;
+
+        }
+
+    /* Info - Source */
+
+        section.infoSource{
+
+            height: 100vh; 
+            padding: 3rem; 
+            display: flex;
+
+        }
+
+        div.infoSourceText{
+
+            text-align: end; 
+            font-family: 'Roboto', sans-serif; 
+            font-weight: 300; 
+            display: flex; 
+            flex-wrap: wrap;
+
+        }
+
+        .infoSourceTextTittle{
+
+            margin-left: auto;
+            margin-top: 3rem;
+
+        }
+
+        /* Cards */
+
+            .card{
+
+                text-align: center;
+                color: black;
+                text-decoration: none;
+
+            }
+
+            .card:hover{
+
+                color: black;
+                text-decoration: none;
+
+            }
+
+            i.cardIcon{
+
+                color: black; 
+                font-size: 500%;
+
+            }
+
+    /* Footer */
+
+        footer.footer{
+
+            height: 50vh;
+            margin-top: 2%;
+            display: flex;
+            align-items: center;
+            background-color: rgb(29, 29, 29);
+
+        }
+
+        .logoFooter{
+
+            position: absolute;
+            left: 80%;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        div.footerContato{
+
+            border-color: rgb(212, 212, 212);
+            border-width: 1px;
+            border-style: solid;
+            background-color: rgb(29, 29, 29);
+
+        }
+        button.btn-link, button.btn-link:hover, button.btn-link:focus{
+
+            color: rgb(212, 212, 212);
+            text-decoration: none;
+            font-size: 1.2rem;
+
+        }
+
+        .footerInput{
+
+            background-color: rgb(29, 29, 29);
+            color: rgb(212, 212, 212);
+            border: rgb(212, 212, 212) 1px solid;
+            padding-left: 0.5rem;
+
+        }
+        input.footerInput:focus{
+            background-color: rgb(39, 39, 39);
+        }
+
+        form.footerForm{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-bottom: 0;
+        }
+        label.footerFormLabel{
+
+            color: rgb(212, 212, 212);
+            font-size: 1rem;
+            margin-right: 1rem;
+
+        }
+
+        input.footerFormButton{
+
+            margin-top: 0.5rem;
+            border: rgb(212, 212, 212) 1px solid;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        input.footerFormButton:hover{
+
+            background-color: rgb(212, 212, 212);
+            color: rgb(29, 29, 29);
+
+        }
+
+/* Gallery */
+
+    /* Imagens */
+
+        .galleryImages{
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 90%;
+            margin: auto;
+
+        }
+
+        .galleryImage{
+
+            max-width: 200px;
+            max-height: 150px;
+            margin-top: 0.6%;
+            margin-bottom: 2%;
+            display: flex;
+            border: lightgray 1px solid;
+
+        }
+
+/* Notícias */
+
+    .carrosel{
+        background-color: rgb(39, 39, 39);
+        height: 40vh;
+    }
+
+    .noticiasTitulo{
+        margin: 5rem;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        font-family: 'Roboto', sans-serif; 
+        font-weight: 600;
+    }
+    .noticiasDivisao{
+        width: 90%;
+    }
+
+    .noticiaLink{
+        background-color: rgb(240,240,240);
+        border: rgb(0,0,0,0.5) 1px solid;
+        border-radius: 0.2rem;
+        width: 90%;
+        margin: auto;
+        color: black;
+        text-decoration: none;
+        padding: 1rem;
+        padding-left: 3rem;
+    }
+
+    .carousel-item{
+        text-align: center;
+    }
+
+    .carIm{
+        height: 40vh;
+    }
+
+
+.contato{
+    margin-left: 2rem;
+}
+
+.map{
+    width: 80%;
+    height: 20rem;
+    margin-left: 10%;
+}
+
+/* Tela pequena */
+
+@media screen and (max-width: 1000px){
+
+/* index */
+
+    /* Navbar */
+
+
+    /* Jumbotron */
+
+        .jumbotronImage{
+            display: none;
+        }
+        .jumbotronImageDiv{
+
+            visibility: hidden;
+            display: none;
+
+        }
+
+        p.jumbotronTittle{
+
+            font-size: 2.7rem;
+
+        }
+
+        p.lead{
+
+            font-size: 150%;
+
+        }
+
+    /* Info - Source */ 
+
+        .sourceImageDiv{
+
+            display: none;
+
+        }
+
+    footer.footer{
+        margin-top: 40rem;
+        height: 5rem;
+    }
+    .logoFooter{
+        display: none;
+    }
+    .footerForm{
+        display: none;
+    }
+
+/* Gallery */
+
+    /* Imagens */
+
+    .galleryImage{
+
+        max-width: 600px;
+        max-height: 450px;
+        margin: auto;
+
+    }
+
+}

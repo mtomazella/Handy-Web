@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <title>DesignTCC</title>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" type="text/css" href="./../css/style.css">
+
+        <!-- JavaScript -->
+        <!-- <script src="script.js"></script> -->
+        
+        <!-- Favicon -->     
+        <link rel="apple-touch-icon" sizes="180x180" href="./../icon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./../icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./../icon/favicon-16x16.png">
+        <link rel="mask-icon" href="./../icon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/500b73534a.js" crossorigin="anonymous"></script>
+
+        <!-- Google Fonts - Roboto family -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+
+    </head>
+
+    <body class="container col-12 m-0 p-0">
+
+        <!-- Navbar Menu -->
+        
+        <nav class="navbar navbar-expand-sm notSelec navbar-light">
+
+            <a class="navbar-brand" href="#"><img src="../icon/favicon-32x32.png"> </a>
+
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="noticias.html">Notícias</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sobre</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="#">Info</a>
+                            <a class="dropdown-item" href="contato.html">Contato</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+
+                    <li class="nav-item active">
+
+                        <a class="nav-link" target="_blank" href="https://github.com/matheustomazella/protese"><i class="fab fa-github icon"></i> GitHub</a>
+
+                    </li>
+
+                </ul>
+            </div>
+
+        </nav>  
+        <hr class="my-0">
+
+        <!-- Jumbotron  -->
+
+        <div class="container jumbotron jumbotron-fluid col-12 mt-0 pt-4"> 
+            
+            <div class="col-lg-6 notSelec pl-4 col-12 jumbotronTextDiv">   
+
+                <p class="display-3 jumbotronTittle">Handy</p>
+
+                <p class="lead">É barato, é bacana</p>
+
+                <hr class="my-2">
+
+                <p class="largerFont">
+                    Pensada para acessibilidade.<br>
+                    Construída para e por você.
+                </p>
+
+                <a class="btn btn-primary jumbotronButton btn-lg mt-5 ml-3" href="#info" role="button">Mais informações</a>
+           
+            </div>
+
+            <div class="jumbotronImageDiv col-lg-6">
+
+                <img src="./../imagens/2.png" alt="imagem da Prótese" class="jumbotronImage">
+
+            </div>
+
+        </div>
+        <hr class="display-3 col-10">
+
+        <!-- Info - Open-Souce -->
+
+        <section class="container-fluid col-12 infoSource" id="info">
+
+            <div class="sourceImageDiv">
+
+                <img src="../imagens/3dPrinter.webp" style="max-width: 80%; width: auto;">
+
+            </div>
+            
+            <div class="col-12 col-md-6 infoSourceText">
+                
+                <h1 class="infoSourceTextTittle">Mais sobre o projeto</h1>
+
+                <p class="largerFont">
+
+                    Nosso projeto está disponivel em nosso repositório no GitHub para ser imprimido.
+                    <br><br>
+                    Também não deixe de acessar nosso canal do YouTube para receber atualizações sobre o projeto e ver tutoriais para a montagem.
+
+                </p>
+
+                <div class="card col-lg-4 col-md-11 pt-3 mt-3">
+                    <a href="#" class="card border-0" target="_blank">
+                        <i class="fa fa-download cardIcon"></i>
+                        <div class="card-body">
+                            <h4 class="card-title">Download</h4>
+                            <p class="card-text">Faça o download dos arquivos</p>
+                        </div>
+                    </a>
+                </div>
+
+                 <div class="card col-lg-4 col-md-11 pt-3 mt-3">
+                    <a href="https://github.com/matheustomazella/projectstrap" target="_blank" class="card border-0">
+                        <i class="fab fa-github cardIcon"></i>
+                        <div class="card-body">
+                            <h4 class="card-title">GitHub</h4>
+                            <p class="card-text">Repositório no GitHub (Esse é o do site)</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card col-lg-4 pt-3 mt-3">
+                    <a href="#" class="card border-0" target="_blank">
+                        <i class="fab fa-youtube cardIcon"></i>
+                        <div class="card-body">
+                            <h4 class="card-title">YouTube</h4>
+                            <p class="card-text">Canal no YouTube</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Menu Inferior -->
+
+        <footer class="container-fluid footer">
+
+            <div class="accordion col-8 mt-2 footerForm">
+
+                <div class="card footerContato">
+                  <div class="card-header" id="headingOne">
+                    <h1 class="mb-2">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Enviar Mensagem
+                      </button>
+                    </h1>
+                  </div>             
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="padding-bottom: 0.5rem; padding-top: 0;">
+                      
+                        <form class="container-fluid footerForm">
+
+                            <label class="footerFormLabel">Nome:</label> <input required class="footerInput rounded" data-toggle="tooltip" data-placement="top" title="Informe seu nome" type="text" style="width: 40%;">
+                            <label class="footerFormLabel" style="margin-left: 1rem;">Assunto:</label> <select data-toggle="tooltip" data-placement="top" title="Informe o assunto do feedback" required class="footerInput rounded" type="dropdown" style="width: fit-contents">
+                                <option value="reclama">Reclamação</option>
+                                <option value="Sugestão">Sugestão</option>
+                                <option value="Cansei">NãoSeiMaisOqueColocar</option>
+                                <option value="outro">Outro</option>
+                            </select>
+
+                            <textarea class="footerInput" data-toggle="tooltip" data-placement="top" title="Escreva sua mensagem aqui" required placeholder="Sua Mensagem..." rows="3" cols="150" style="margin-top: 1rem;"></textarea>
+
+                            <input type="button" value="Enviar" data-toggle="modal" data-target="#modelId" class="btn footerFormButton footerInput" style="margin-top: 0.5rem;">
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Confirmar envio do formulário</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Deseja confirmar o envio do formulário?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                            <button type="submit" class="btn btn-primary" data-dismiss="modal">Enviar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                  </div>
+                </div>
+                
+            </div>
+            
+            <div class="logoFooter">
+                <img src="../icon/branco-medio.png">
+            </div>
+
+        </footer>
+
+        <!-- jQuery, Popper.js, Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>  
+
+        <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+        </script>
+
+    </body>
+
+</html>
