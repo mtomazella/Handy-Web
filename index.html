@@ -6,23 +6,141 @@
         <title>Handy</title>
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/@mq-small.css">
+        <!-- Favicon -->     
+        <link rel="apple-touch-icon" sizes="180x180" href="./img/icon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./img/icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./img/icon/favicon-16x16.png">
+        <link rel="mask-icon" href="./img/icon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
         <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/500b73534a.js" crossorigin="anonymous"></script>
         <!-- Materialize CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Materialize Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     </head>
 
-    <body class="container col-12 m-0 p-0">
+    <body class="ubuntu-font">
         
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="nav-wrapper">
+                <a href="#" data-target="slide-out" class="sidenav-trigger show-on-small hide-on-med-and-up"><i class="material-icons">menu</i></a>
+                <a href="#!" class="brand-logo navbar-icon left hide-on-small-and-down"><img class="navbar-icon" src="img/icon/android-chrome-192x192.png" alt="icon"></a>
+                <ul class="left hide-on-small-and-down">
+                    <li><a href="#intro"> O projeto   </a></li>
+                    <li><a href="#func"> Funcionamento   </a></li>
+                    <li><a href=""> Construção  </a></li>
+                    <li><a href=""> Galeria     </a></li>
+                    <li><a href=""> Suporte     </a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--<hr class="navbar">-->
+        <!-- Sidenav -->
+        <ul id="slide-out" class="sidenav">
+            <div class="sidenav-icon"><img src="img/icon/android-chrome-192x192.png" alt="icon"></div>
+            <li><a class="color-black navbar-icon-text" href=""> Home        </a></li>
+            <li><a class="color-black navbar-icon-text" href="#intro"> O projeto   </a></li>
+            <li><a class="color-black navbar-icon-text" href="#func"> Funcionamento   </a></li>
+            <li><a class="color-black navbar-icon-text" href=""> Construção  </a></li>
+            <li><a class="color-black navbar-icon-text" href=""> Galeria     </a></li>
+            <li><a class="color-black navbar-icon-text" href=""> Suporte     </a></li>
+        </ul>
+        
+        <!-- Header -->
+        <section class="header">
+            <div class="header">
+                <h1 class="header-handy">HANDY</h1>
+                <div class="header-text">
+                    Em busca de um futuro de próteses acessíveis.
+                </div>
+            </div>
+            <div class="header-parallax-container parallax-container">
+                <div class="parallax header-parallax"><img class="header-parallax" src="img/Sketch.png"></div>
+                <img class="header-parallax-mask" src="img/header-icon/icon.png" alt="icon">
+            </div>
+        </section>
+        
+        <!-- Introdução --> <!-- Adiconar Links para app e partes -->
+        
+        <section id="intro" class="site-section intro">
+            <h1 class="section-title"> Introdução </h1>
+            <div class="intro-content">
+                <div class="intro-section intro-section-btn">
+                    <a class="waves-effect waves-light btn btn-std" target="_blank" href="https://github.com/MatheusTomazella/Handy">Acessar Arquivos</a>
+                </div>
+                <div class="intro-section intro-text">
+                    Este é um projeto dedicado a ajudar aqueles que não possuem fundos monetários para adquirir uma das mais avançadas próteses do mercado mas ainda manter sua qualidade de vida com prazeres e atitudes.
+                </div>
+            </div>
+        </section>
+        
+        <!-- Funcionamento -->
+        
+        <section id="func" class="site-section func"> 
+            <h1 class="section-title"> Funcionamento </h1>
+            <p class="func-text">
+                O movimento da prótese é baseado em fios que correm entre os dedos, ligando a parte mais extrema de cada dedo com seu correspondente atuador. Uma vez que o atuador puxa o fio, a ponta do dedo será puxada e o levará a se dobrar contra a palma, assim como uma mão biológica.
+            </p>
+            <div class="func-bg">
+                <img class="func-bg-img" src="img/Sketch2.png">
+            </div>
+            <p class="func-text">
+                O movimento é controlado por um circito que recebe informações de sensores posicionados no braço, assim como do aplicativo de celular.<br> Existem dois controles:  um para mudar o "modo", que define como a prótese vai se comportar, e um que muda o "estado", que define qual a posição dos dedos de acordo com o "modo".
+            </p>
+        </section>
+        
+        <!-- Aplicativo -->
 
+        <section class="site-section app">
+            <h1 class="section-title"> Aplicativo </h1>
+            <div class="app-content">
+                <img class="app-img app-img-front" src="./img/CellFront.png"> 
+                <p class="app-content">
+                    A aplicação desenvolvida para a prótese permite ao usuário criar "modos", além de acessar informação e controles do produto. <br>
+                    Os modos criados fazem com que a prótese se comporte de formas diferentes de acordo com a necessidade do usuário.<br>
+                    O aplicativo se conecta a prótese através do Bluetooth do celular.
+                    <a class="waves-effect waves-light btn btn-std btn-app">Baixar Aplicativo</a>
+                </p>
+                
+            </div>
+        </section>
+
+        <!-- Construção -->
+
+        <section class="site-section constr">
+            <h1 class="section-title"> Construção </h1>
+            <div class="constr-content">
+                <p class="constr-text">
+                    
+                </p>
+                <img class="constr-img" src="./img/Porca.png">
+            </div>
+        </section>
+
+        <!-- Galeria -->
+
+        <!-- Suporte -->
 
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <!-- Materialize Js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- Materialize Initialize -->
+        <script>
+            $(document).ready( ( ) => {
+                $('.parallax').parallax();
+            } );
+            $(document).ready( ( ) => {
+                $('.sidenav').sidenav();
+            } );
+        </script>
     </body
->
-</html>
+    >
+    </html>

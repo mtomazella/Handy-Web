@@ -1,0 +1,26 @@
+@media ( max-width: 800px ) {
+
+    /* Header */
+    section.header {
+        height: 80vh;
+        flex-direction: column-reverse;
+        align-content: space-around;
+    }
+    div.header {
+        height: fit-content;
+        padding: 0 0 0 2rem;
+    }
+    h1.header-handy {
+        padding: 0;
+        font-size: 4rem;
+    }
+    div.header-text {
+        text-align: center;
+    }
+    div.header-parallax-container {
+        height: 15rem;
+    }
+    img.header-parallax-mask {
+        height: 15rem;
+    }
+}

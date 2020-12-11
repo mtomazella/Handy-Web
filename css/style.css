@@ -1,0 +1,250 @@
+:root {
+    --text-color-grey:  rgb(138, 138, 138);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.color-black {
+    color: black !important;
+}
+
+.ubuntu-font {
+    font-family: 'Ubuntu', sans-serif !important;
+}
+
+.site-section {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    height: fit-content;
+    justify-content: center;
+    margin: auto;
+}
+
+h1.section-title {
+    font-size: 2rem;
+    color: rgb(61, 61, 61);
+}
+
+a.btn-std {
+    background-color: #F7C59F;
+    padding: 0.5rem;
+    height: auto;
+    width: 15rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+a.btn-std:hover {
+    background-color: #fcbd8d;
+}
+
+/* Navbar */
+
+nav.navbar {
+    background-color: inherit;
+    box-shadow: none;
+}
+nav.navbar i, nav.navbar a {
+    color: var(--text-color-grey);
+    font-size: 1.1rem;
+}
+a.navbar-icon {
+    position: relative !important;
+    margin: 10px 3rem 0 2rem;
+}
+img.navbar-icon {
+    height: 2.4rem;
+}
+a.navbar-icon-text {
+    font-size: 1.3rem !important;
+    margin-right: 1rem;
+}
+hr.navbar {
+    margin: 0;
+    padding: 0 10% 0 10%;
+    height: 0;
+    background-color: transparent;
+    border: none;
+    border-top: solid 1px rgb(207, 207, 207);
+}
+
+/* Sidenav */
+
+div.sidenav-icon {
+    text-align: center;
+    padding: 3rem;
+    margin-top: 2rem;
+}
+div.sidenav-icon img {
+    width: 60%;
+}
+
+/* Header */
+
+section.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 40rem;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+div.header {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-left: 5rem;
+    align-items: center;
+    justify-content: center;
+}
+h1.header-handy {
+    font-size: 5rem;
+    font-family: 'Ubuntu', sans-serif !important;
+    color: rgb(70, 70, 70);
+    letter-spacing: 2rem;
+    font-weight: 300;
+    margin-bottom: 5rem;
+}
+div.header-text {
+    padding-right: 2rem;
+    font-size: 1.3rem;
+    color: var(--text-color-grey);
+}
+
+    /* Parallax */
+    div.header-parallax-container {
+        align-self: center;
+        height: 80%;
+        width: fit-content;
+    }
+    div.header-parallax {
+        background-color: rgb(44, 42, 42);
+    }
+    img.header-parallax {
+        image-rendering: optimizeQuality;
+        filter: invert(1);
+        width: 80rem;
+    }
+    img.header-parallax-mask {
+        height: 100%;
+    }
+
+/* Intro */
+
+section.intro {
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--text-color-grey);
+    height: 60vh;
+    padding-top: 10vh;
+    justify-items: center;
+}
+
+div.intro-content {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    margin: auto;
+    justify-content: center;
+}
+
+div.intro-section {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    text-align: center;
+    align-content: space-between;
+}
+
+div.intro-section-btn {
+    width: fit-content;
+    padding: 1rem 3rem 0 0;
+}
+
+div.intro-text {
+    margin-top: 1rem;
+}
+
+/* Funcionamento */
+
+section.func{
+    flex-direction: column;
+    width: 50%;
+    font-size: 1.3rem;
+    text-align: center;
+    color: var(--text-color-grey);
+    height: 100vh;
+    align-content: center;
+}
+
+div.func-bg{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+img.func-bg-img {
+    width: 100%;
+}
+
+p.func-text{
+    font-size:1.3rem;
+    /* background-color: rgb(44, 42, 42); */
+    padding: 2rem 0 2rem 0;
+}
+
+/* Aplicativo */
+
+section.app {
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 100vh;
+}
+
+div.app-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+img.app-img {
+    height: 30rem;
+    margin-right: 3rem;
+}
+
+p.app-content {
+    color: var(--text-color-grey);
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+a.btn-app {
+    margin-top: 4rem;
+}
+
+/* Construção */
+
+section.constr {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 60%;
+}
+
+div.constr-content {
+    margin-top: 4rem;
+}
+
+img.constr-img {
+    transform: rotate(90deg);
+    height: 20rem;
+}
