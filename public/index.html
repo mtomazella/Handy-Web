@@ -33,11 +33,12 @@
                 <a href="#" data-target="slide-out" class="sidenav-trigger show-on-small hide-on-med-and-up"><i class="material-icons">menu</i></a>
                 <a href="#!" class="brand-logo navbar-icon left hide-on-small-and-down"><img class="navbar-icon" src="img/icon/android-chrome-192x192.png" alt="icon"></a>
                 <ul class="left hide-on-small-and-down">
-                    <li><a href="#intro"> O projeto   </a></li>
-                    <li><a href="#func"> Funcionamento   </a></li>
-                    <li><a href=""> Construção  </a></li>
-                    <li><a href=""> Galeria     </a></li>
-                    <li><a href=""> Suporte     </a></li>
+                    <li><a href="#intro">   O projeto       </a></li>
+                    <li><a href="#func">    Funcionamento   </a></li>
+                    <li><a href="#app">     Aplicativo      </a></li>
+                    <li><a href="#constr">  Construção      </a></li>
+                    <li><a href="/gallery"> Galeria         </a></li>
+                    <li><a href="/support"> Suporte         </a></li>
                 </ul>
             </div>
         </nav>
@@ -45,12 +46,13 @@
         <!-- Sidenav -->
         <ul id="slide-out" class="sidenav">
             <div class="sidenav-icon"><img src="img/icon/android-chrome-192x192.png" alt="icon"></div>
-            <li><a class="color-black navbar-icon-text" href=""> Home        </a></li>
-            <li><a class="color-black navbar-icon-text" href="#intro"> O projeto   </a></li>
-            <li><a class="color-black navbar-icon-text" href="#func"> Funcionamento   </a></li>
-            <li><a class="color-black navbar-icon-text" href=""> Construção  </a></li>
-            <li><a class="color-black navbar-icon-text" href=""> Galeria     </a></li>
-            <li><a class="color-black navbar-icon-text" href=""> Suporte     </a></li>
+            <li><a class="color-black navbar-icon-text" href="">            Home            </a></li>
+            <li><a class="color-black navbar-icon-text" href="#intro">      O projeto       </a></li>
+            <li><a class="color-black navbar-icon-text" href="#func">       Funcionamento   </a></li>
+            <li><a class="color-black navbar-icon-text" href="#app">        Aplicativo      </a></li>
+            <li><a class="color-black navbar-icon-text" href="#constr">     Construção      </a></li>
+            <li><a class="color-black navbar-icon-text" href="/gallery">    Galeria         </a></li>
+            <li><a class="color-black navbar-icon-text" href="/support">    Suporte         </a></li>
         </ul>
         
         <!-- Header -->
@@ -71,13 +73,8 @@
         
         <section id="intro" class="site-section intro">
             <h1 class="section-title"> Introdução </h1>
-            <div class="intro-content">
-                <div class="intro-section intro-section-btn">
-                    <a class="waves-effect waves-light btn btn-std" target="_blank" href="https://github.com/MatheusTomazella/Handy">Acessar Arquivos</a>
-                </div>
-                <div class="intro-section intro-text">
-                    Este é um projeto dedicado a ajudar aqueles que não possuem fundos monetários para adquirir uma das mais avançadas próteses do mercado mas ainda manter sua qualidade de vida com prazeres e atitudes.
-                </div>
+            <div class="intro-content text-format">
+                Este é um projeto dedicado a ajudar aqueles que não possuem fundos monetários para adquirir uma das mais avançadas próteses do mercado mas ainda manter sua qualidade de vida com prazeres e atitudes.
             </div>
         </section>
         
@@ -85,48 +82,48 @@
         
         <section id="func" class="site-section func"> 
             <h1 class="section-title"> Funcionamento </h1>
-            <p class="func-text">
+            <div class="func-text text-format">
                 O movimento da prótese é baseado em fios que correm entre os dedos, ligando a parte mais extrema de cada dedo com seu correspondente atuador. Uma vez que o atuador puxa o fio, a ponta do dedo será puxada e o levará a se dobrar contra a palma, assim como uma mão biológica.
-            </p>
+            </div>
             <div class="func-bg">
                 <img class="func-bg-img" src="img/Sketch2.png">
             </div>
-            <p class="func-text">
-                O movimento é controlado por um circito que recebe informações de sensores posicionados no braço, assim como do aplicativo de celular.<br> Existem dois controles:  um para mudar o "modo", que define como a prótese vai se comportar, e um que muda o "estado", que define qual a posição dos dedos de acordo com o "modo".
-            </p>
+            <div class="func-text text-format">
+                O movimento é controlado por um circuito que recebe informações de sensores posicionados no braço, assim como do aplicativo de celular.<br> Existem dois controles:  um para mudar o "modo", que define como a prótese vai se comportar, e um que muda o "estado", que define qual a posição dos dedos de acordo com o "modo".
+            </div>
         </section>
         
         <!-- Aplicativo -->
 
-        <section class="site-section app">
+        <section id="app" class="site-section app">
             <h1 class="section-title"> Aplicativo </h1>
             <div class="app-content">
-                <img class="app-img app-img-front" src="./img/CellFront.png"> 
-                <p class="app-content">
+                <img class="app-img app-img-front hide-on-med-and-down" src="./img/CellFront.png"> 
+                <div class="app-content-text text-format">
                     A aplicação desenvolvida para a prótese permite ao usuário criar "modos", além de acessar informação e controles do produto. <br>
                     Os modos criados fazem com que a prótese se comporte de formas diferentes de acordo com a necessidade do usuário.<br>
-                    O aplicativo se conecta a prótese através do Bluetooth do celular.
+                    O aplicativo se conecta a prótese através do Bluetooth do celular.<br>
                     <a class="waves-effect waves-light btn btn-std btn-app">Baixar Aplicativo</a>
-                </p>
+                </div>
                 
             </div>
         </section>
 
         <!-- Construção -->
 
-        <section class="site-section constr">
+        <section id="constr" class="site-section constr">
             <h1 class="section-title"> Construção </h1>
             <div class="constr-content">
-                <p class="constr-text">
-                    
-                </p>
-                <img class="constr-img" src="./img/Porca.png">
+                <div class="constr-text text-format">
+                    Um dos pontos mais importantes do projeto é que pode ser construído por qualquer pessoa. Para isso, oferecemos dos arquivos do projeto e as instruções para a construção, ambos disponíveis nos botões abaixo. <br>
+                    A prótese foi pensada como uma solução temporaria, construída com a ajuda de impressão 3D, porém pode ser usado qualquer material. Se construída de alumínio, por exemplo, pode ser usada como uma prótese permanente.<br>
+                    Também é possível personalizá-la como preferir. Alguns módulos úteis estarão presentes nas instruções, como um para controle sem fio.<br>
+                    <a class="waves-effect waves-light btn btn-std btn-constr" target="_blank" href="http://github.com/matheustomazella/handy">Acessar Arquivos</a>
+                    <a class="waves-effect waves-light btn btn-std btn-constr">Acessar Instruções</a>
+                </div>
+                <img class="constr-img hide-on-med-and-down" src="./img/Porca.png">
             </div>
         </section>
-
-        <!-- Galeria -->
-
-        <!-- Suporte -->
 
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

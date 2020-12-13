@@ -1,0 +1,34 @@
+body {
+    padding: 0;
+}
+ 
+/* Chat */
+
+section.chat {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+a.btn-chat {
+    width: fit-content;
+    margin-top: 2rem;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+/* hr */
+
+hr.hr-support {
+    width: 70%;
+    margin: 2rem auto 2rem auto;
+    border-color: transparent;
+    background-color: rgb(240, 240, 240);
+}
+
+/* Frequentes */
+
+ul.freq-questions {
+    width: 80%;
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+}

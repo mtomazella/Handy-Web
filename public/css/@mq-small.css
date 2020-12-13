@@ -23,4 +23,27 @@
     img.header-parallax-mask {
         height: 15rem;
     }
+
+    
+    /* Introdução */
+
+    section.intro {
+        margin-bottom: 20vw;
+    }
+
+    div.intro-section {
+        text-align: justify;
+    }
+
+    /* Aplicativo */
+
+    section.app {
+        margin-top: 15rem;
+    }
+
+    /* Construção */
+
+    section.constr {
+        margin-top: 10rem;
+    }
 }

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Handy</title>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/css/gallery.css">
+        <link rel="stylesheet" type="text/css" href="/css/@mq-small.css">
+        <!-- Favicon -->     
+        <link rel="apple-touch-icon" sizes="180x180" href="./img/icon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./img/icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./img/icon/favicon-16x16.png">
+        <link rel="mask-icon" href="./img/icon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/500b73534a.js" crossorigin="anonymous"></script>
+        <!-- Materialize CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Materialize Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body class="ubuntu-font">
+        
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="nav-wrapper">
+                <a href="#" data-target="slide-out" class="sidenav-trigger show-on-small hide-on-med-and-up"><i class="material-icons">menu</i></a>
+                <a href="/" class="brand-logo navbar-icon left hide-on-small-and-down"><img class="navbar-icon" src="/img/icon/android-chrome-192x192.png" alt="icon"></a>
+                <ul class="left hide-on-small-and-down">
+                    <li><a href="/#intro">  O projeto       </a></li>
+                    <li><a href="/#func">   Funcionamento   </a></li>
+                    <li><a href="/#app">    Aplicativo      </a></li>
+                    <li><a href="/#constr"> Construção      </a></li>
+                    <li><a href="#">        Galeria         </a></li>
+                    <li><a href="/support"> Suporte         </a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--<hr class="navbar">-->
+        <!-- Sidenav -->
+        <ul id="slide-out" class="sidenav">
+            <div class="sidenav-icon"><img src="img/icon/android-chrome-192x192.png" alt="icon"></div>
+            <li><a class="color-black navbar-icon-text" href="/">           Home            </a></li>
+            <li><a class="color-black navbar-icon-text" href="/#intro">     O projeto       </a></li>
+            <li><a class="color-black navbar-icon-text" href="/#func">      Funcionamento   </a></li>
+            <li><a class="color-black navbar-icon-text" href="/#app">       Aplicativo      </a></li>
+            <li><a class="color-black navbar-icon-text" href="/#constr">    Construção      </a></li>
+            <li><a class="color-black navbar-icon-text" href="">            Galeria         </a></li>
+            <li><a class="color-black navbar-icon-text" href="/support">    Suporte         </a></li>
+        </ul>
+
+        <!-- Galeria -->
+        <section class="site-section gallery">
+            <h1 class="section-title"> Galeria </h1>
+            <div id="gallery-images" class="gallery-images">
+
+                <!-- - - - - - Imagens - - - - - -->
+
+            </div>
+        </section>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>        
+        <!-- Materialize Js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- Materialize Initialize -->
+        <script>
+            $(document).ready( ( ) => {
+                $('.sidenav').sidenav( );
+
+                //const serverUrl = 'http://protesehandy.herokuapp.com'
+                const serverUrl = 'http://localhost:3306'
+
+                $.ajax({
+                    type: "GET",
+                    url: `${serverUrl}/pics`,
+                    success: ( response ) => {
+                        response.forEach( name => {
+                            const image = document.createElement( 'img' );
+                            image.className = 'gallery-image';
+                            image.src = `/gallery/${name}`;
+                            $( '#gallery-images' ).append( image );
+                        });
+                    }
+                });
+            } );
+        </script>
+    </body>
+</html>

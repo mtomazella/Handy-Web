@@ -11,6 +11,11 @@ body {
     color: black !important;
 }
 
+.text-format {
+    color: var(--text-color-grey);
+    font-size: 1.2rem;
+}
+
 .ubuntu-font {
     font-family: 'Ubuntu', sans-serif !important;
 }
@@ -39,6 +44,9 @@ a.btn-std {
 }
 a.btn-std:hover {
     background-color: #fcbd8d;
+}
+a.btn-std:focus {
+    background-color: #F7C59F;
 }
 
 /* Navbar */
@@ -138,35 +146,19 @@ section.intro {
     flex-direction: column;
     text-align: center;
     font-size: 1.4rem;
-    color: var(--text-color-grey);
-    height: 60vh;
+    height: 80vh;
     padding-top: 10vh;
     justify-items: center;
+    width: 40%;
 }
 
 div.intro-content {
     display: flex;
     flex-direction: row;
-    width: fit-content;
+    width: 100%;
     margin: auto;
+    margin-top: 2rem;
     justify-content: center;
-}
-
-div.intro-section {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    text-align: center;
-    align-content: space-between;
-}
-
-div.intro-section-btn {
-    width: fit-content;
-    padding: 1rem 3rem 0 0;
-}
-
-div.intro-text {
-    margin-top: 1rem;
 }
 
 /* Funcionamento */
@@ -179,6 +171,7 @@ section.func{
     color: var(--text-color-grey);
     height: 100vh;
     align-content: center;
+    margin-top: 2vw;
 }
 
 div.func-bg{
@@ -186,14 +179,14 @@ div.func-bg{
     flex-direction: row;
     width: 100%;
     justify-content: center;
+    margin: 2rem 0 2rem 0;
 }
 
 img.func-bg-img {
     width: 100%;
 }
 
-p.func-text{
-    font-size:1.3rem;
+div.func-text{
     /* background-color: rgb(44, 42, 42); */
     padding: 2rem 0 2rem 0;
 }
@@ -205,6 +198,7 @@ section.app {
     align-items: center;
     width: 60%;
     height: 100vh;
+    margin-top: 5vw;
 }
 
 div.app-content {
@@ -220,10 +214,11 @@ img.app-img {
     margin-right: 3rem;
 }
 
-p.app-content {
-    color: var(--text-color-grey);
-    font-size: 1.2rem;
+div.app-content-text {
+    display: flex;
+    flex-direction: column;
     text-align: justify;
+    align-items: center;
 }
 
 a.btn-app {
@@ -237,14 +232,24 @@ section.constr {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 60%;
+    width: 64%;
+    margin-top: 2vw;
 }
 
 div.constr-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: right;
     margin-top: 4rem;
 }
 
 img.constr-img {
     transform: rotate(90deg);
     height: 20rem;
+}
+
+a.btn-constr {
+    margin-top: 1rem;
+    margin-left: 1rem;
 }
