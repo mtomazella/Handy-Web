@@ -34,8 +34,13 @@ app.get( '/support', function( request, response ){
 } );
 
 /* SupportChat.html */
-app.get( '/support-chat', function( request, response ){
+app.get( '/chat', function( request, response ){
     response.sendFile( __dirname + '/public/supportChat.html' );
+} );
+
+/* Signup.html */
+app.get( '/signup', function( request, response ){
+    response.sendFile( __dirname + '/public/signup.html' );
 } );
 
 app.get( '/', ( request, response ) => {

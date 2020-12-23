@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Handy</title>
+        <title>Handy | Galeria</title>
 
         <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -75,8 +75,8 @@
             $(document).ready( ( ) => {
                 $('.sidenav').sidenav( );
 
-                const serverUrl = 'https://protesehandy.herokuapp.com'
-                //const serverUrl = 'http://localhost:3306'
+                //const serverUrl = 'https://protesehandy.herokuapp.com'
+                const serverUrl = `${document.location.protocol}//${document.location.host}`
 
                 $.ajax({
                     type: "GET",

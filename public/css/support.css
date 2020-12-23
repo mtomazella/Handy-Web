@@ -4,7 +4,7 @@ body {
  
 /* Chat */
 
-section.chat {
+section.chat-suj {
     flex-direction: column;
     align-items: center;
     margin-top: 5rem;
@@ -27,8 +27,12 @@ hr.hr-support {
 
 /* Frequentes */
 
+section.freq {
+    flex-wrap: wrap;
+}
+
 ul.freq-questions {
-    width: 80%;
+    width: 60vw;
     margin-top: 2rem;
     margin-bottom: 10rem;
 }
