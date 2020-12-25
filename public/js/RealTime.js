@@ -19,6 +19,7 @@ class RealTime {
         socket.emit( 'setSocket', { type: this.user.type, id: this.user.id } )
 
         socket.on( 'message', ( message ) => {
+            console.log( message )
             const newMessage = new Men( message );
             newMessage.show();
         } )
@@ -47,10 +48,13 @@ class RealTime {
                 this.otherUserInfo = { socketId: info.support.socketId, userId: info.support.supportId };
                 $.ajax({
                     type: "GET",
-                    url: `${APIurl}/admin?id=${this.otherUserInfo.userId}`,
+                    url: `${APIurl}/admin?id=${this.otherUserInfo.userId}&token=${user.token}`,
                     success: function (response) {
                         console.log(response[0])
                         realTime.otherUserInfo.name = response[0].name;
+                    },
+                    error: ( error ) => {
+                        console.log( error );
                     }
                 });
             }

@@ -9,16 +9,23 @@ async function loginTrigger ( ) {
 
 async function login ( email, password ) {
     await $.ajax({
-        type: "GET",
-        url: `${APIurl}/user?email=${email}&password=${password}`,
+        type: "POST",
+        url: `${APIurl}/login`,
+        data: {
+            email,
+            password,
+            type: 'user'
+        },
         success: ( response ) => {
-            if ( response != undefined && response[0] != undefined ){
-                user = new User( response[0] );
+            if ( response != undefined ){
+                user = new User( response.user );
                 user.password = password;
+                user.token = response.token;
             }
         },
         error: ( error ) => {
-            alert( error )
+            console.log( error )
+            alert( error.error.code )
         }
     });
     if ( user ) { 
