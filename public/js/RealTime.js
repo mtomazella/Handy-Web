@@ -16,7 +16,7 @@ class RealTime {
         const socket    = await io( url );
         this.user.type  = userType;
 
-        socket.emit( 'setSocket', { type: this.user.type, id: this.user.id } )
+        socket.emit( 'setSocket', { type: this.user.type, id: this.user.id, name: this.user.name } )
 
         socket.on( 'message', ( message ) => {
             console.log( message )
@@ -26,13 +26,7 @@ class RealTime {
         socket.on( 'messageLoad', ( messages ) => {
             messages.forEach( ( message ) => {
                 const newMessage = new Men( message );
-                let waitingTime = 0;
-                const nameIsReady = setInterval( ( ) => {
-                    if ( this.otherUserInfo.name != undefined || waitingTime >= 10 ) { 
-                        clearInterval( nameIsReady );
-                        newMessage.show();
-                    }
-                }, 1000 );
+                newMessage.show();
             } )
         } )
         socket.on( 'repportError', ( error ) => {
@@ -44,20 +38,8 @@ class RealTime {
         } )
         socket.on( 'supportConnect', ( info ) => {
             console.log( info )
-            if ( info.user.socketId == this.socket.id ) { 
-                this.otherUserInfo = { socketId: info.support.socketId, userId: info.support.supportId };
-                $.ajax({
-                    type: "GET",
-                    url: `${APIurl}/admin?id=${this.otherUserInfo.userId}&token=${user.token}`,
-                    success: function (response) {
-                        console.log(response[0])
-                        realTime.otherUserInfo.name = response[0].name;
-                    },
-                    error: ( error ) => {
-                        console.log( error );
-                    }
-                });
-            }
+            if ( info.user.socketId == this.socket.id )
+                this.otherUserInfo = { socketId: info.support.socketId, userId: info.support.supportId, name: info.support.name };
         } )
 
         this.socket = socket;
