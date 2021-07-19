@@ -28,6 +28,16 @@ app.get( '/gallery', function( request, response ){
     response.sendFile( __dirname + '/public/gallery.html' );
 } );
 
+/* Volunteers.html */
+app.get( '/volunt', function( request, response ){
+    response.sendFile( __dirname + '/public/volunteers.html' );
+} );
+
+/* Providers.html */
+app.get( '/prov', function( request, response ){
+    response.sendFile( __dirname + '/public/providers.html' );
+} );
+
 /* Support.html */
 app.get( '/support', function( request, response ){
     response.sendFile( __dirname + '/public/support.html' );

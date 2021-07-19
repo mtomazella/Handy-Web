@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Handy | Galeria</title>
+        <title>Handy | Voluntários</title>
 
         <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="/css/style.css">
-        <link rel="stylesheet" type="text/css" href="/css/gallery.css">
+        <link rel="stylesheet" type="text/css" href="/css/volunteers.css">
         <link rel="stylesheet" type="text/css" href="/css/@mq-small.css">
         <!-- Favicon -->     
         <link rel="apple-touch-icon" sizes="180x180" href="./img/icon/apple-touch-icon.png">
@@ -35,11 +35,9 @@
                 <a href="/" class="brand-logo navbar-icon left hide-on-small-and-down"><img class="navbar-icon" src="/img/icon/android-chrome-192x192.png" alt="icon"></a>
                 <ul class="left hide-on-small-and-down">
                     <li><a href="/#intro">  O projeto       </a></li>
-                    <li><a href="/#func">   Funcionamento   </a></li>
                     <li><a href="/#app">    Aplicativo      </a></li>
                     <li><a href="/#constr"> Construção      </a></li>
-                    <li><a href="#">        Galeria         </a></li>
-                    <li><a href="/volunt">  Voluntários     </a></li>
+                    <li><a href="#">        Voluntários     </a></li>
                     <li><a href="/prov">  	Componentes     </a></li>
                     <li><a href="/support"> Suporte         </a></li>
                 </ul>
@@ -51,23 +49,54 @@
             <div class="sidenav-icon"><img src="img/icon/android-chrome-192x192.png" alt="icon"></div>
             <li><a class="color-black navbar-icon-text" href="/">           Home            </a></li>
             <li><a class="color-black navbar-icon-text" href="/#intro">     O projeto       </a></li>
-            <li><a class="color-black navbar-icon-text" href="/#func">      Funcionamento   </a></li>
             <li><a class="color-black navbar-icon-text" href="/#app">       Aplicativo      </a></li>
             <li><a class="color-black navbar-icon-text" href="/#constr">    Construção      </a></li>
-            <li><a class="color-black navbar-icon-text" href="">            Galeria         </a></li>
-            <li><a class="color-black navbar-icon-text" href="/volunt">     Voluntários     </a></li>
+            <li><a class="color-black navbar-icon-text" href="#">           Voluntários     </a></li>
             <li><a class="color-black navbar-icon-text" href="/prov">     	Componentes     </a></li>
             <li><a class="color-black navbar-icon-text" href="/support">    Suporte         </a></li>
         </ul>
 
         <!-- Galeria -->
-        <section class="site-section gallery">
-            <h1 class="section-title"> Galeria </h1>
-            <div id="gallery-images" class="gallery-images">
-
-                <!-- - - - - - Imagens - - - - - -->
-
+        <section class="volunt-main">
+            <h1 class="section-title"> Voluntários </h1>
+            
+            <!-- Filters -->
+            <div class="filter">
+                <h1 class="section-subtitle" style="padding-bottom: 1rem;"> Filtros: </h1>
+                <!-- Country -->
+                <div class="input-field col s12">
+                    <select>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                    </select>
+                    <label>País</label>
+                </div>
+                <!-- State -->
+                <div class="input-field col s12">
+                    <select>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                    </select>
+                    <label>Estado</label>
+                </div>
+                <!-- City -->
+                <div class="input-field col s12">
+                    <select>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                    </select>
+                    <label>Cidade</label>
+                </div>
+                <!-- Search -->
+                <button class="btn waves-effect waves-light" type="submit" name="action">
+                    Buscar
+                    <i class="material-icons right">search</i>
+                </button>
             </div>
+
         </section>
 
         <!-- jQuery -->
@@ -76,25 +105,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <!-- Materialize Initialize -->
         <script>
-            $(document).ready( ( ) => {
-                $('.sidenav').sidenav( );
-
-                //const serverUrl = 'https://protesehandy.herokuapp.com'
-                const serverUrl = `${document.location.protocol}//${document.location.host}`
-
-                $.ajax({
-                    type: "GET",
-                    url: `${serverUrl}/pics`,
-                    success: ( response ) => {
-                        response.forEach( name => {
-                            const image = document.createElement( 'img' );
-                            image.className = 'gallery-image';
-                            image.src = `/gallery/${name}`;
-                            $( '#gallery-images' ).append( image );
-                        });
-                    }
-                });
-            } );
+            $(document).ready(function(){
+                $('select').formSelect();
+            });
         </script>
     </body>
 </html>

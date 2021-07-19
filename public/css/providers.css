@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prov-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accordion {
+    width: 100%;
+}
+
+.accordion-header {
+    color: red;
+}
+
+.prov-list {
+}
+
+.item-prov {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}

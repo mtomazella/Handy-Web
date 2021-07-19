@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.volunt-main {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: fit-content;
+    align-items: center;
+    margin: auto;
+}
+
+div.filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 0 2rem 0;
+}
+
+button {
+    background-color: #F7C59F !important;
+}
+button:hover {
+    background-color: #fcbd8d !important;
+}
+button:focus {
+    background-color: #F7C59F !important;
+}

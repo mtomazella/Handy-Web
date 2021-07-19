@@ -33,6 +33,10 @@ h1.section-title {
     font-size: 2rem;
     color: rgb(61, 61, 61);
 }
+h1.section-subtitle {
+    font-size: 1.4rem;
+    color: rgb(61, 61, 61);
+}
 
 a.btn-std {
     background-color: #F7C59F;

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="utf-8">
+		<title>Handy | Componentes</title>
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+    	<link rel="stylesheet" type="text/css" href="/css/providers.css">
+        <link rel="stylesheet" type="text/css" href="/css/@mq-small.css">
+
+        <!-- Favicon -->     
+        <link rel="apple-touch-icon" sizes="180x180" href="./img/icon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./img/icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./img/icon/favicon-16x16.png">
+        <link rel="mask-icon" href="./img/icon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/500b73534a.js" crossorigin="anonymous"></script>
+        <!-- Materialize CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Materialize Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="ubuntu-font">
+
+	<!-- Navbar -->
+	<nav class="navbar">
+		<div class="nav-wrapper">
+			<a href="#" data-target="slide-out" class="sidenav-trigger show-on-small hide-on-med-and-up"><i class="material-icons">menu</i></a>
+			<a href="/" class="brand-logo navbar-icon left hide-on-small-and-down"><img class="navbar-icon" src="/img/icon/android-chrome-192x192.png" alt="icon"></a>
+			<ul class="left hide-on-small-and-down">
+				<li><a href="/#intro">  O projeto       </a></li>
+				<li><a href="/#app">    Aplicativo      </a></li>
+				<li><a href="/#constr"> Construção      </a></li>
+				<li><a href="/volunt">  Voluntários     </a></li>
+				<li><a href="/prov">  	Componentes     </a></li>
+				<li><a href="/support"> Suporte         </a></li>
+			</ul>
+		</div>
+	</nav>
+	<!--<hr class="navbar">-->
+	<!-- Sidenav -->
+	<ul id="slide-out" class="sidenav">
+		<div class="sidenav-icon"><img src="img/icon/android-chrome-192x192.png" alt="icon"></div>
+		<li><a class="color-black navbar-icon-text" href="/">           Home            </a></li>
+		<li><a class="color-black navbar-icon-text" href="/#intro">     O projeto       </a></li>
+		<li><a class="color-black navbar-icon-text" href="/#app">       Aplicativo      </a></li>
+		<li><a class="color-black navbar-icon-text" href="/#constr">    Construção      </a></li>
+		<li><a class="color-black navbar-icon-text" href="/volunt">     Voluntários     </a></li>
+		<li><a class="color-black navbar-icon-text" href="/prov">     	Componentes     </a></li>
+		<li><a class="color-black navbar-icon-text" href="/support">    Suporte         </a></li>
+	</ul>
+
+
+    <div class="site-section prov-main">
+
+    	<h1 class="section-title" style="margin: 6rem 0 6rem 0">Componentes e Fornecedores</h1>
+    		
+			<!-- Loading -->
+		<div id="loading" class="preloader-wrapper big active">
+			<div class="spinner-layer spinner-red-only">
+				<div class="circle-clipper left">
+					<div class="circle"></div>
+				</div><div class="gap-patch">
+					<div class="circle"></div>
+				</div><div class="circle-clipper right">
+					<div class="circle"></div>
+				</div>
+			</div>
+		</div>
+
+			<!-- List -->
+		<ul id="list" class="collapsible" style="width: 100%;display: none;">
+			<!-- Componentes -->
+		</ul>
+        
+	</div>
+
+</body>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Materialize Js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        
+<script src="./js/Chat.js"></script>
+<script src="./js/htmlComp.js"></script>
+<script src="./js/providers.js"></script>
+
+</html>
