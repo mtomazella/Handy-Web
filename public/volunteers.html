@@ -63,39 +63,31 @@
             <!-- Filters -->
             <div class="filter">
                 <h1 class="section-subtitle" style="padding-bottom: 1rem;"> Filtros: </h1>
-                <!-- Country -->
-                <div class="input-field col s12">
-                    <select>
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 2</option>
-                      <option value="3">Option 3</option>
-                    </select>
-                    <label>País</label>
-                </div>
                 <!-- State -->
                 <div class="input-field col s12">
-                    <select>
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 2</option>
-                      <option value="3">Option 3</option>
+                    <select id="state">
+                        <option value="">Todos</option>
+                      <!-- Options -->
                     </select>
                     <label>Estado</label>
                 </div>
                 <!-- City -->
-                <div class="input-field col s12">
-                    <select>
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 2</option>
-                      <option value="3">Option 3</option>
-                    </select>
-                    <label>Cidade</label>
-                </div>
+                <div class="col s12">
+                    <input id="city" list="cities" placeholder="Cidade" autocomplete="off">
+					<datalist id="cities">
+						<!-- Cities -->
+					</datalist>
+                </div
                 <!-- Search -->
-                <button class="btn waves-effect waves-light" type="submit" name="action">
+                <button class="btn waves-effect waves-light" type="submit" name="action" onclick="search()">
                     Buscar
                     <i class="material-icons right">search</i>
                 </button>
             </div>
+
+            <ul id="list" class="collapsible" style="width: 100%;display: flex;flex-direction: column;">
+                <!-- Voluntários -->
+            </ul>
 
         </section>
 
@@ -108,6 +100,11 @@
             $(document).ready(function(){
                 $('select').formSelect();
             });
+            $('.collapsible').collapsible();
         </script>
+        <!--Scripts-->
+        <script src="./js/Chat.js"></script>
+        <script src="js/htmlComp.js"></script>
+        <script src="js/volunteer.js"></script>
     </body>
 </html>

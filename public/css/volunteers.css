@@ -22,6 +22,14 @@ div.filter {
     padding: 2rem 0 2rem 0;
 }
 
+div.volunteer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 button {
     background-color: #F7C59F !important;
 }
