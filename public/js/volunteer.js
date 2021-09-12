@@ -51,7 +51,7 @@ list.innerHTML += `
         </div>
 
         <div class="collapsible-body">
-            <div>${volunteer.description} </div>
+            <div>${volunteer.descr} </div>
         </div>
     </li>
     `;
