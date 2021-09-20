@@ -29,11 +29,11 @@ function fetchVolunteers ( state, city ) {
 
 function fetchStates ( ) {
     return fetch(apiState);
-};
+}
 
 function fetchCities ( state ) {
     return fetch(apiCity.replace("{uf}",state));
-};
+}
 
 function addVolunteers( volunteer ) {
 list.innerHTML += `  

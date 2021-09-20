@@ -9,6 +9,7 @@ class Chat {
     }
     
     post ( ) {
+        if ( realTime.otherUserInfo.socketId == "" ) return;
         const idAdmin = ( realTime.user.type === 'admin' ) ? realTime.user.id : realTime.otherUserInfo.userId;
         const idUser  = ( realTime.user.type === 'admin' ) ? realTime.otherUserInfo.userId : realTime.user.id;
         const message = new Men( { 

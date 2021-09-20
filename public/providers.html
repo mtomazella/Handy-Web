@@ -3,6 +3,7 @@
 
 <head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>Handy | Componentes</title>
 		<link rel="stylesheet" type="text/css" href="/css/style.css">
     	<link rel="stylesheet" type="text/css" href="/css/providers.css">
@@ -24,7 +25,6 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-
 </head>
 
 <body class="ubuntu-font">
@@ -33,28 +33,32 @@
 	<nav class="navbar">
 		<div class="nav-wrapper">
 			<a href="#" data-target="slide-out" class="sidenav-trigger show-on-small hide-on-med-and-up"><i class="material-icons">menu</i></a>
-			<a href="/" class="brand-logo navbar-icon left hide-on-small-and-down"><img class="navbar-icon" src="/img/icon/android-chrome-192x192.png" alt="icon"></a>
+			<a href="/" class="brand-logo navbar-icon left hide-on-small-and-down"><img class="navbar-icon" src="img/icon/android-chrome-192x192.png" alt="icon"></a>
 			<ul class="left hide-on-small-and-down">
-				<li><a href="/#intro">  O projeto       </a></li>
-				<li><a href="/#app">    Aplicativo      </a></li>
-				<li><a href="/#constr"> Construção      </a></li>
+				<li><a href="/#intro">   O projeto       </a></li>
+				<li><a href="/#app">     Aplicativo      </a></li>
+				<li><a href="/#constr">  Construção      </a></li>
+				<!-- <li><a href="/gallery"> Galeria         </a></li> -->
 				<li><a href="/volunt">  Voluntários     </a></li>
 				<li><a href="/prov">  	Componentes     </a></li>
 				<li><a href="/support"> Suporte         </a></li>
 			</ul>
+			<a href="/account" style="margin: 0;" class="brand-logo navbar-icon right hide-on-small-and-down"><i class="material-icons" style="font-size: 2rem;">account_circle</i></a>
 		</div>
 	</nav>
 	<!--<hr class="navbar">-->
 	<!-- Sidenav -->
 	<ul id="slide-out" class="sidenav">
 		<div class="sidenav-icon"><img src="img/icon/android-chrome-192x192.png" alt="icon"></div>
-		<li><a class="color-black navbar-icon-text" href="/">           Home            </a></li>
-		<li><a class="color-black navbar-icon-text" href="/#intro">     O projeto       </a></li>
-		<li><a class="color-black navbar-icon-text" href="/#app">       Aplicativo      </a></li>
-		<li><a class="color-black navbar-icon-text" href="/#constr">    Construção      </a></li>
-		<li><a class="color-black navbar-icon-text" href="/volunt">     Voluntários     </a></li>
+		<li><a class="color-black navbar-icon-text" href="/">            Home            </a></li>
+		<li><a class="color-black navbar-icon-text" href="/#intro">      O projeto       </a></li>
+		<li><a class="color-black navbar-icon-text" href="/#app">        Aplicativo      </a></li>
+		<li><a class="color-black navbar-icon-text" href="/#constr">     Construção      </a></li>
+		<!-- <li><a class="color-black navbar-icon-text" href="/gallery">    Galeria         </a></li> -->
+		<!-- <li><a class="color-black navbar-icon-text" href="/volunt">     Voluntários     </a></li> -->
 		<li><a class="color-black navbar-icon-text" href="/prov">     	Componentes     </a></li>
 		<li><a class="color-black navbar-icon-text" href="/support">    Suporte         </a></li>
+		<li><a href="/account" style="margin-top: 2rem;" class="color-black navbar-icon-text"><i class="material-icons" style="font-size: 2rem;">account_circle</i></a></li>
 	</ul>
 
 
@@ -88,6 +92,12 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <!-- Materialize Js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!-- Materialize Initialize -->
+<script>
+	$(document).ready( ( ) => {
+		$('.sidenav').sidenav();
+	} );
+</script>
         
 <script src="./js/Chat.js"></script>
 <script src="./js/htmlComp.js"></script>

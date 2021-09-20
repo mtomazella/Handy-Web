@@ -3,6 +3,7 @@ $('body').on( 'click', ( ) => {
 } )
 
 async function loginTrigger ( ) {
+    document.getElementById("login-error").style.display = "none";
     const result = await login( $('#pinus-email')[0].value, $('#pinus-password')[0].value );
     if ( result ) $('#login-modal').modal('hide');
 }
@@ -25,7 +26,7 @@ async function login ( email, password ) {
         },
         error: ( error ) => {
             console.log( error )
-            alert( error.error.code )
+            document.getElementById("login-error").style.display = "block";
         }
     });
     if ( user ) { 

@@ -53,6 +53,11 @@ app.get( '/signup', function( request, response ){
     response.sendFile( __dirname + '/public/signup.html' );
 } );
 
+/* Account.html */
+app.get( '/account', function( request, response ){
+    response.sendFile( __dirname + '/public/account.html' );
+} );
+
 app.get( '/', ( request, response ) => {
     response.sendFile( `${__dirname}/public/html/index.html` );
 } )

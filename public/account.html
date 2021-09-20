@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Handy | Conta</title>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/@mq-small.css">
+        <!-- Favicon -->     
+        <link rel="apple-touch-icon" sizes="180x180" href="./img/icon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./img/icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./img/icon/favicon-16x16.png">
+        <link rel="mask-icon" href="./img/icon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/500b73534a.js" crossorigin="anonymous"></script>
+        <!-- Materialize CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Materialize Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body class="ubuntu-font">
+        
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="nav-wrapper">
+                <a href="#" data-target="slide-out" class="sidenav-trigger show-on-small hide-on-med-and-up"><i class="material-icons">menu</i></a>
+                <a href="/" class="brand-logo navbar-icon left hide-on-small-and-down"><img class="navbar-icon" src="img/icon/android-chrome-192x192.png" alt="icon"></a>
+                <ul class="left hide-on-small-and-down">
+                    <li><a href="/#intro">   O projeto       </a></li>
+                    <li><a href="/#app">     Aplicativo      </a></li>
+                    <li><a href="/#constr">  Construção      </a></li>
+                    <!-- <li><a href="/gallery"> Galeria         </a></li> -->
+                    <li><a href="/volunt">   Voluntários     </a></li>
+                    <li><a href="/prov">  	 Componentes     </a></li>
+                    <li><a href="/support">  Suporte         </a></li>
+                </ul>
+                <a href="/account" style="margin: 0;" class="brand-logo navbar-icon right hide-on-small-and-down"><i class="material-icons" style="font-size: 2rem;">account_circle</i></a>
+            </div>
+        </nav>
+        <!--<hr class="navbar">-->
+        <!-- Sidenav -->
+        <ul id="slide-out" class="sidenav">
+            <div class="sidenav-icon"><img src="img/icon/android-chrome-192x192.png" alt="icon"></div>
+            <li><a class="color-black navbar-icon-text" href="/">            Home            </a></li>
+            <li><a class="color-black navbar-icon-text" href="/#intro">      O projeto       </a></li>
+            <li><a class="color-black navbar-icon-text" href="/#app">        Aplicativo      </a></li>
+            <li><a class="color-black navbar-icon-text" href="/#constr">     Construção      </a></li>
+            <!-- <li><a class="color-black navbar-icon-text" href="/gallery">    Galeria         </a></li> -->
+            <!-- <li><a class="color-black navbar-icon-text" href="/volunt">      Voluntários     </a></li> -->
+            <li><a class="color-black navbar-icon-text" href="/prov">     	 Componentes     </a></li>
+            <li><a class="color-black navbar-icon-text" href="/support">     Suporte         </a></li>
+            <li><a href="/account" style="margin-top: 2rem;" class="color-black navbar-icon-text"><i class="material-icons" style="font-size: 2rem;">account_circle</i></a></li>
+        </ul>
+        
+        <div style="
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 90%;
+        width: 100%;">
+            <div class="l30-s100" style="padding: 1rem;text-align: center;">
+                <i style="font-size: 5rem;margin-bottom: 2rem;" class="material-icons prefix">account_circle</i>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">label</i>
+                    <input required id="name" type="text" class="validate required" placeholder="Nome" autocomplete="off">
+                </div>  
+                <button style="width: 60%;margin-top: 2rem;" class="btn waves-effect" onclick="editUser()">Editar</button>
+                <div id="user-edit-error" class="form-group" style="margin: 1rem 0 0 1rem;color: red;display: none;">
+                    <i class="fa fa-exclamation-circle" style="margin-right: 5px;" aria-hidden="true"></i>
+                    Falha na Edição
+                </div>
+            </div>
+
+
+            <div class="l30-s100" style="padding: 1rem 1rem 0 1rem;text-align: center; margin-bottom: 2rem;">
+                <div style="display: flex; width: 100%; flex-direction: row; justify-content: center;">
+                    <hr class="center" style="width: 90%; border: 0;border-top: 1px #dddddd solid; margin: 3rem 0 3rem 0">
+                </div>
+                <div id="join" style="display: none; flex-direction: column; align-items: center;width: 100%;">
+                    <button class="btn waves-effect outline" style="display: flex;flex-direction: row;">
+                        <i style="margin: 0;padding: 0; margin-right: 0.5rem;" class="material-icons">assignment_ind</i>
+                        <div style="display: flex; flex-direction: row; height: 100%; align-items: center;">
+                            Voluntariar-se
+                        </div>
+                    </button>
+                    <p style="text-align: justify; color: rgb(138, 138, 138); font-size: 0.8rem; margin-top: 2rem;">
+                        Voluntários são usuários que disponibilizam suas informações de contato no site e se dispõe a ajudar indivíduos interessados a se envolver com o projeto, sendo colaborando ou construindo. <br>
+                        Se você tem ferramentas ou conhecimento para ajudar, considere inscrever-se. A única informação obrigatória é um email de contato para que o interessado possa mandar mensagens.
+                    </p>
+                </div>
+
+                <div id="edit" style="text-align: center;display: none;flex-direction: column;">
+                    <i style="font-size: 5rem;margin-bottom: 2rem;" class="material-icons prefix">assignment_ind</i>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">contact_mail</i>
+                        <input required id="cont-email" type="text" class="validate" placeholder="Email de Contato" autocomplete="off">
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">contact_phone</i>
+                        <input id="phone" type="text" class="validate" placeholder="Whatsapp" autocomplete="off">
+                        <p class="right" style="text-align: justify; color: rgb(138, 138, 138); font-size: 0.8rem; margin-top: -0.3rem;">
+                            Opcional
+                        </p>
+                    </div>
+                    <div class="switch" style="margin-bottom: 1rem;">
+                        <label>
+                          Nome Oculto
+                          <input id="nameVis" type="checkbox">
+                          <span class="lever"></span>
+                          Nome Público
+                        </label>
+                    </div>  
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">language</i>
+                        <input required id="country" type="text" class="validate" placeholder="País" autocomplete="off">
+                    </div>  
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">location_on</i>
+                        <input required id="state" type="text" class="validate" placeholder="Estado" autocomplete="off">
+                    </div>  
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">location_city</i>
+                        <input required id="city" type="text" class="validate" placeholder="Cidade" autocomplete="off">
+                    </div>  
+                    <div class="input-field col s12">
+                        <textarea id="description" class="materialize-textarea"></textarea>
+                        <p class="right" style="text-align: justify; color: rgb(138, 138, 138); font-size: 0.8rem; margin-top: -0.3rem;">
+                            Opcional
+                        </p>
+                        <label for="textarea1">Descrição</label>
+                    </div>
+                    <button style="width: 60%;margin-top: 2rem;align-self: center;" class="btn waves-effect">Editar</button>
+                    <button style="width: 60%;margin-top: 2rem;align-self: center;" class="btn outline outline-red waves-effect">Retirar-se</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="login" class="modal l40-s100">
+            <div class="modal-content" style="display: flex; flex-direction: column;justify-content: center;align-items: center;">
+                <h4 style="align-self: flex-start; margin-left: 2rem;">Entrar</h4>
+                <input required id="login-email" type="email" class="validate" placeholder="Email" autocomplete="email">
+                <input required id="login-password" type="password" class="validate" placeholder="Senha" autocomplete="current-password"> 
+                <button style="width: 60%;margin-top: 2rem;" class="btn waves-effect" onclick="loginTrigger()">Entrar</button>
+                <div id="login-error" class="form-group" style="margin: 1rem 0 0 1rem;color: red;display: none;">
+                    <i class="fa fa-exclamation-circle" style="margin-right: 5px;" aria-hidden="true"></i>
+                    Falha de autenticação
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a style="margin-right: 1rem;" href="/signup">Cadastrar</a>
+            </div>
+        </div>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <!-- Materialize Js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- Materialize Initialize -->
+        <script>
+            let loginModal;
+            $(document).ready( ( ) => {
+                $('.parallax').parallax();
+                $('.sidenav').sidenav();
+                $('.modal').modal();
+                loginModal = M.Modal.getInstance(document.getElementById("login"));
+                loginModal.open();
+                $('body').on( 'click', ( ) => {
+                    if ( !user ) loginModal.open();
+                } )
+            } );
+        </script>
+
+        <script src="js/User.js"></script>
+        <script src="js/htmlComp.js"></script>
+        <script src="js/account.js"></script>
+    </body>
+</html>

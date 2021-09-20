@@ -38,8 +38,10 @@ class RealTime {
         } )
         socket.on( 'supportConnect', ( info ) => {
             console.log( info )
-            if ( info.user.socketId == this.socket.id )
+            if ( info.user.socketId == this.socket.id ) {
                 this.otherUserInfo = { socketId: info.support.socketId, userId: info.support.supportId, name: info.support.name };
+                document.getElementById("loading").style.display = "none";
+            }
         } )
 
         this.socket = socket;
