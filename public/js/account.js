@@ -1,5 +1,8 @@
 let voluntInfo;
 
+const possibleEmail = new URLSearchParams(location.search).get("email");
+if ( possibleEmail ) document.getElementById("login-email").value = possibleEmail;
+
 const name = document.getElementById("name")
 const contEmail = document.getElementById("cont-email")
 const phone = document.getElementById("phone")
@@ -47,13 +50,12 @@ function fillUserInformation ( ) {
     name.value = user.name;
 }
 
-function isVolunteer ( id ) {
+function isVolunteer ( ) {
     return new Promise ( ( resolve, reject ) => {
         $.ajax({
             type: "GET",
             url: `${APIurl}/volunt?u.id=${user.id}`,
             success: function (response) {
-                console.log(response);
                 if ( response.length > 0 ) {
                     voluntInfo = response[0];
                     resolve(true);
@@ -88,22 +90,21 @@ function fillVolunteerInfo ( ) {
 function editUser ( ) {
     document.getElementById("user-edit-error").style.display = "none";
     if ( name.value.trim() == "" ) return;
-    const obj = {
-        identifier: {
-            id: user.id
-        },
-        update: {
-            name: name.value.trim()
-        },
-        token: user.token
-    }
-    console.log(obj)
     $.ajax({
         type: "PUT",
         url: `${APIurl}/user`,
-        data: obj,
+        contentType: "application/json",
+        data: JSON.stringify({
+            identifier: {
+                id: user.id
+            },
+            update: {
+                name: name.value.trim()
+            },
+            token: user.token
+        }),
         success: function (response) {
-            fillUserInformation();
+            window.location.href = `/account?email=${user.email}`
         },
         error: ( error ) => {
             console.error(error);
