@@ -99,46 +99,51 @@
 
                 <div id="edit" style="text-align: center;display: none;flex-direction: column;">
                     <i style="font-size: 5rem;margin-bottom: 2rem;" class="material-icons prefix">assignment_ind</i>
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">contact_mail</i>
-                        <input required id="cont-email" type="text" class="validate" placeholder="Email de Contato" autocomplete="off">
+                    <div id="edit-form" style="display: none;">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">contact_mail</i>
+                            <input required id="cont-email" type="text" class="validate" placeholder="Email de Contato" autocomplete="off">
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">contact_phone</i>
+                            <input id="phone" type="text" class="validate" placeholder="Whatsapp" autocomplete="off">
+                            <p class="right" style="text-align: justify; color: rgb(138, 138, 138); font-size: 0.8rem; margin-top: -0.3rem;">
+                                Opcional
+                            </p>
+                        </div>
+                        <div class="switch" style="margin-bottom: 1rem;">
+                            <label>
+                              Nome Oculto
+                              <input id="nameVis" type="checkbox">
+                              <span class="lever"></span>
+                              Nome Público
+                            </label>
+                        </div>  
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">language</i>
+                            <input required id="country" type="text" class="validate" placeholder="País" autocomplete="off">
+                        </div>  
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">location_on</i>
+                            <input required id="state" type="text" class="validate" placeholder="Estado" autocomplete="off">
+                        </div>  
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">location_city</i>
+                            <input required id="city" type="text" class="validate" placeholder="Cidade" autocomplete="off">
+                        </div>  
+                        <div class="input-field col s12">
+                            <textarea id="description" class="materialize-textarea"></textarea>
+                            <p class="right" style="text-align: justify; color: rgb(138, 138, 138); font-size: 0.8rem; margin-top: -0.3rem;">
+                                Opcional
+                            </p>
+                            <label for="textarea1">Descrição</label>
+                        </div>
+                        <button id="edit-btn" style="width: 60%;margin-top: 2rem;align-self: center;" class="btn waves-effect" onclick="editVolunteer()">Cadastrar-se</button>
                     </div>
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">contact_phone</i>
-                        <input id="phone" type="text" class="validate" placeholder="Whatsapp" autocomplete="off">
-                        <p class="right" style="text-align: justify; color: rgb(138, 138, 138); font-size: 0.8rem; margin-top: -0.3rem;">
-                            Opcional
-                        </p>
+                    <div id="edit-del" style="display: flex; flex-direction: column; display: none;">
+                        Você atualmente é um voluntário. Para retirar-se, clique no botão abaixo.
+                        <button id="edit-del" style="width: 60%;margin-top: 2rem;align-self: center;" class="btn outline outline-red waves-effect" onclick="deleteVolunteer()">Retirar-se</button>
                     </div>
-                    <div class="switch" style="margin-bottom: 1rem;">
-                        <label>
-                          Nome Oculto
-                          <input id="nameVis" type="checkbox">
-                          <span class="lever"></span>
-                          Nome Público
-                        </label>
-                    </div>  
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">language</i>
-                        <input required id="country" type="text" class="validate" placeholder="País" autocomplete="off">
-                    </div>  
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">location_on</i>
-                        <input required id="state" type="text" class="validate" placeholder="Estado" autocomplete="off">
-                    </div>  
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">location_city</i>
-                        <input required id="city" type="text" class="validate" placeholder="Cidade" autocomplete="off">
-                    </div>  
-                    <div class="input-field col s12">
-                        <textarea id="description" class="materialize-textarea"></textarea>
-                        <p class="right" style="text-align: justify; color: rgb(138, 138, 138); font-size: 0.8rem; margin-top: -0.3rem;">
-                            Opcional
-                        </p>
-                        <label for="textarea1">Descrição</label>
-                    </div>
-                    <button id="edit-btn" style="width: 60%;margin-top: 2rem;align-self: center;" class="btn waves-effect" onclick="editVolunteer()">Editar</button>
-                    <button id="edit-del" style="width: 60%;margin-top: 2rem;align-self: center;" class="btn outline outline-red waves-effect">Retirar-se</button>
                 </div>
             </div>
         </div>

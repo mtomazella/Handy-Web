@@ -71,8 +71,11 @@ function isVolunteer ( ) {
 
 async function handleVolunteer ( ) {
     if ( await isVolunteer( user.id ) ) {
+        // document.getElementById("edit").style.display = "flex";
+        // fillVolunteerInfo();
         document.getElementById("edit").style.display = "flex";
-        fillVolunteerInfo();
+        
+        document.getElementById("edit-del").style.display = "flex";
     } else document.getElementById("join").style.display = "flex";
 }
 
@@ -116,7 +119,7 @@ function editUser ( ) {
 function openForm ( ) {
     document.getElementById("join").style.display = "none";
     document.getElementById("edit").style.display = "flex";
-    document.getElementById("edit-btn").innerText = "Cadastrar-se";
+    document.getElementById("edit-form").style.display = "block";
     document.getElementById("edit-btn").onclick = createVolunteer;
     document.getElementById("edit-del").style.display = "none";
 }
@@ -127,12 +130,14 @@ function verifyFormValues ( ) {
     if ( country.value.trim()   == "" ) return false;
     if ( state.value.trim() == "" || !validStates.includes(state.value) ) return false;
     if ( city.value.trim()     == "" ) return false;
-
     return true;
 }
 
 function createVolunteer ( ) {
-    if ( !verifyFormValues() ) return;
+    if ( !verifyFormValues() ) { 
+        alert("Estado inválido.");
+        return;
+    }
     $.ajax({
         type: "POST",
         url: `${APIurl}/volunt`,
@@ -148,22 +153,28 @@ function createVolunteer ( ) {
             contactEmail: contEmail.value,
             token: user.token,
         },
-        success: console.log,
-        error: console.error
+        success: result => {
+            console.log(result);
+            alert("Cadastro realizado com sucesso!");
+        },
+        error: error => {
+            console.error(error);
+            alert("Erro ao criar voluntário");
+        }
     });
 }
 
 function editVolunteer ( ) {
     if ( !verifyFormValues() ) return;
-    $.ajax({
+    $.ajax( {
         type: "PUT",
         url: `${APIurl}/volunt`,
-        data: {
+        data: JSON.stringify( {
             identifier: {
                 id: user.id,
             },
             update: { 
-                nameVisibility: nameVis.checked ? 1 : 0,
+                nameVisibility: nameVis.checked,
                 whatsapp: phone.value,
                 country: country.value,
                 city: city.value,
@@ -172,9 +183,31 @@ function editVolunteer ( ) {
                 contactEmail: contEmail.value,
             },
             token: user.token,
-        },
+        }),
         contentType: "application/json",
         success: console.log,
         error: console.error
+    });
+}
+
+function deleteVolunteer ( ) {
+    $.ajax( {
+        type: "DELETE",
+        url: `${APIurl}/volunt`,
+        data: JSON.stringify( {
+            identifier: {
+                id: user.id,
+            },
+            token: user.token,
+        }),
+        contentType: "application/json",
+        success: result => { 
+            console.log(result);
+            location.reload();
+        },
+        error: error => {
+            console.error(error);
+            alert("Erro ao deletar voluntário");
+        }
     });
 }
