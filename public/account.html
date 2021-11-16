@@ -85,7 +85,7 @@
                     <hr class="center" style="width: 90%; border: 0;border-top: 1px #dddddd solid; margin: 3rem 0 3rem 0">
                 </div>
                 <div id="join" style="display: none; flex-direction: column; align-items: center;width: 100%;">
-                    <button class="btn waves-effect outline" style="display: flex;flex-direction: row;">
+                    <button class="btn waves-effect outline" style="display: flex;flex-direction: row;" onclick="openForm()">
                         <i style="margin: 0;padding: 0; margin-right: 0.5rem;" class="material-icons">assignment_ind</i>
                         <div style="display: flex; flex-direction: row; height: 100%; align-items: center;">
                             Voluntariar-se
@@ -137,8 +137,8 @@
                         </p>
                         <label for="textarea1">Descrição</label>
                     </div>
-                    <button style="width: 60%;margin-top: 2rem;align-self: center;" class="btn waves-effect">Editar</button>
-                    <button style="width: 60%;margin-top: 2rem;align-self: center;" class="btn outline outline-red waves-effect">Retirar-se</button>
+                    <button id="edit-btn" style="width: 60%;margin-top: 2rem;align-self: center;" class="btn waves-effect" onclick="editVolunteer()">Editar</button>
+                    <button id="edit-del" style="width: 60%;margin-top: 2rem;align-self: center;" class="btn outline outline-red waves-effect">Retirar-se</button>
                 </div>
             </div>
         </div>
